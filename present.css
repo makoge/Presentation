@@ -1,0 +1,69 @@
+:root{
+    --page-1-color: steelblue;
+    --page-2-color: brown;
+    --page-3-color: purple;
+    --page-4-color: black;
+    --animate-speed: 2s;
+}
+body{
+font-family: 'Times New Roman', Times, serif;
+line-height: 1.5;
+color: white;
+overflow: hidden;
+}
+#page-1{
+    background: var(--page-1-color);
+}
+#page-2{
+    background: var(--page-2-color);
+}
+#page-3{
+    background: var(--page-3-color);
+}
+#page-4{
+    background: var(--page-4-color);
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 4px;
+}
+.btn{
+    display: inline-block;
+    background: azure;
+    padding: 15px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+}
+.btn:hover{
+    background: black;
+    color: azure;
+}
+
+#page-1 h1{
+    font-size: 40px;
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+@keyframes heading{
+    to{
+        transform: translateY(0);
+    }
+}
+#page-1 p{
+    transform: translatex(-1800px);
+    animation: text var(--animate-speed) forwards ease-in 2s;
+}
+@keyframes text{
+    to{
+        transform: translatex(0);
+    }
+}
